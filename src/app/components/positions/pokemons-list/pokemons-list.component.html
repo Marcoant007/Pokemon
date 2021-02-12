@@ -1,0 +1,9 @@
+  <div class="container"  >
+    <div *ngFor="let pokemon of pokemons; let i = index" class="pokemon">
+    <img width="200" [src]="buildUrlImage(i+1)" alt="">
+    <div class="name">
+    <label for="">Name: {{pokemon.name}}</label>
+   </div>
+    </div>
+
+  </div>

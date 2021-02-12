@@ -1,0 +1,30 @@
+
+.container {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: center;
+
+}
+
+.pokemon {
+  width: 200px;
+  height: 300px;
+  background-color: rgb(131, 131, 131);
+  margin: 10px 50px;
+  padding: 20px;
+  border-radius: 20px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.name{
+  padding-top: 50px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+}
