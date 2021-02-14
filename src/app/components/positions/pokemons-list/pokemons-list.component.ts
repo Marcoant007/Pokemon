@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Positions } from '../position.model';
-import { PositionService } from '../position.service';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-pokemons-list',
@@ -10,24 +9,27 @@ import { PositionService } from '../position.service';
 })
 export class PokemonsReadComponents implements OnInit {
 
-  public positions: Positions[];
-  public positionString: any[];
   public pokemons: any[];
 
   constructor(
-    private positionService : PositionService,
+    private pokemonService: PokemonService,
     private router : Router) {
 
      }
 
   async ngOnInit() {
-   await this.loadPositions();
    await this.loadPokemons();
   }
 
  async  loadPokemons() {
-    const data = await this.positionService.findAllPokemons();
+    const data = await this.pokemonService.findAllPokemons();
     this.pokemons = data.results
+    
+  }
+
+  async clickPokemons(id:number){
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`
+    return url
   }
 
   buildUrlImage(id:number):string{
@@ -36,16 +38,5 @@ export class PokemonsReadComponents implements OnInit {
 
   }
 
-  public async loadPositions(){
-        this.positions = await this.positionService.listPosition()
-  }
 
-  async deletePosition(id: any){
-    await this.positionService.deletePosition(id)
-    location.reload()
-  }
-
-  async navigateToUpdate(positions: Positions){
-    this.router.navigate(['/position', positions.id])
-  }
 }

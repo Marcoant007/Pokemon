@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PokemonByclickComponent } from './components/pokemon-byclick/pokemon-byclick.component';
 import { PokemonsReadComponents } from './components/positions/pokemons-list/pokemons-list.component';
 
 import { PositionsCreateComponent } from './components/positions/positions-create/positions-create.component';
@@ -27,6 +28,10 @@ const routes: Routes = [{
 {
   path: "pokemons",
   component: PositionCrudComponent
+},
+{
+  path: "pokemons/:id",
+  component: PokemonByclickComponent
 }
 ];
 

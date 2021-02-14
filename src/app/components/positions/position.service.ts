@@ -43,8 +43,6 @@ export class PositionService {
     }
 
 
-    public async findAllPokemons(): Promise<any>{
-        return this.http.get<any>('https://pokeapi.co/api/v2/pokemon?limit=151').toPromise()
-    }
+   
 
 }
