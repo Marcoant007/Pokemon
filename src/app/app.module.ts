@@ -28,7 +28,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
 import { PositionCrudComponent } from './views/position-crud/position-crud.component';
-import { PositionsCreateComponent } from './components/positions/positions-create/positions-create.component';
 import { PokemonsReadComponents } from './components/positions/pokemons-list/pokemons-list.component';
 import { PokemonByclickComponent } from './components/pokemon-byclick/pokemon-byclick.component';
 
@@ -41,7 +40,6 @@ import { PokemonByclickComponent } from './components/pokemon-byclick/pokemon-by
     NavComponent,
     HomeComponent,
     PositionCrudComponent,
-    PositionsCreateComponent,
     PokemonsReadComponents,
     PokemonByclickComponent
   ],

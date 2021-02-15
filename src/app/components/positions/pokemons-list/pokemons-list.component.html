@@ -1,11 +1,20 @@
-  <div class="container"  >
-    <div *ngFor="let pokemon of pokemons; let i = index" class="pokemon">
-    <a href="/pokemons/:id">
-    <img width="200" [src]="buildUrlImage(i+1)" alt="">
-  </a>
-    <div class="name">
-    <label for="">Name: {{pokemon.name}}</label>
-   </div>
-    </div>
 
+
+<div id="divBusca">
+  <input (keydown.enter)="filterPokemons(pokemonName)" bindon-ngModel="pokemonName"  type="text" id="txtBusca" placeholder="Buscar..." /> 
+  <button   (click)="filterPokemons(pokemonName)" >Pesquisar
+  </button>
+</div>
+
+<div class="container">
+  <div *ngFor="let pokemon of filtredPokemons; let i = index" class="pokemon"
+   (click)="clickPokemon(pokemon.id)">
+    <img width="200" [src]="buildUrlImage(pokemon.id)" alt="">
+    <div class="name">
+      <label for="">Name: {{pokemon.name}}</label>    
+   </div>
   </div>
+</div>
+
+
+

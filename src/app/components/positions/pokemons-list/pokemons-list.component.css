@@ -6,20 +6,74 @@
   justify-content: center;
 
 }
+#divBusca{
+  background-color:#f7f7f7;
+  border:solid 1px;
+  border-radius:15px;
+  width: 60%;
+  margin-left: 100px;
+  
+  -webkit-filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
+  filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
+}
+
+
+#txtBusca{
+  background-color:transparent;
+  margin: 0;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:82%;
+}
+button {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-left: 4%;
+  background: linear-gradient(115deg, #034106  0,  #11a111e8 50%);
+  outline: none;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+
+}
+input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+}
+
+
 
 .pokemon {
   width: 200px;
   height: 300px;
-  background-color: rgb(131, 131, 131);
+  background:linear-gradient(115deg, #3a0c56  0,  #610606e8 50%);
   margin: 10px 50px;
   padding: 20px;
   border-radius: 20px;
-
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
+}
+
+.container :hover{
+  -webkit-filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
+  filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
+  -webkit-transform: rotateZ(-360deg) scale(1.1);
+}
+
+.pokemon:hover{
+  background:linear-gradient(115deg, #5daef0  0,  #0e579ce8 50%);
 }
 
 .name{

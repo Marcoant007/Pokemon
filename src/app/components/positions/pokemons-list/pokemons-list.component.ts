@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { PokemonService } from '../pokemon.service';
 
 @Component({
@@ -9,34 +9,48 @@ import { PokemonService } from '../pokemon.service';
 })
 export class PokemonsReadComponents implements OnInit {
 
-  public pokemons: any[];
+  public allPokemons: any[];
+  public filtredPokemons: any[];
+  pokemon: any = {};
+  pokemonName: string = '';
+  id: number ;
+
+  pokes: any = []
 
   constructor(
     private pokemonService: PokemonService,
-    private router : Router) {
-
-     }
+    private router: Router,
+    private activatedRoute: ActivatedRoute) {
+  }
 
   async ngOnInit() {
-   await this.loadPokemons();
+    await this.loadPokemons();
+    console.log(this.pokemon)
   }
 
- async  loadPokemons() {
+  async loadPokemons() {
     const data = await this.pokemonService.findAllPokemons();
-    this.pokemons = data.results
+    this.filtredPokemons = data.results;
+    this.allPokemons = this.filtredPokemons;
     
+    for await (const pokemon of this.filtredPokemons) {
+      let result: any = await this.pokemonService.findPokemonByName(pokemon.name);
+      pokemon.id = result.id;
+    }
   }
 
-  async clickPokemons(id:number){
-    const url = `https://pokeapi.co/api/v2/pokemon/${id}`
-    return url
+  async filterPokemons(query: string) {
+    this.filtredPokemons = this.allPokemons.filter(pokemon => {
+      return pokemon.name.includes(query);
+    });
   }
 
-  buildUrlImage(id:number):string{
+  clickPokemon(id: any) {
+    this.router.navigate(["/pokemon/", id]);
+  }
+
+  buildUrlImage(id: number): string {
     const urlImage = `https://pokeres.bastionbot.org/images/pokemon/${id}.png`
     return urlImage
-
   }
-
-
 }

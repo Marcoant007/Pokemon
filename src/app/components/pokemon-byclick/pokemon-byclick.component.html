@@ -1,1 +1,31 @@
-<p>pokemon-byclick works!</p>
+<div class="container">
+    <div class="pokemon">
+        <img width="300" [src]="buildUrlImage(pokemon.id)" alt="">
+    </div>
+    <form action="" id="mytable">
+        <div class="name">
+            <label for=""> Name: {{pokemon.name}}</label>
+            <br><br>
+            <label for="">Habilidades: 
+                <span class="ability" *ngFor="let abl of pokemon.abilities">{{abl.ability.name}}</span>
+            </label>
+            <br><br>
+            <label for="">Espécie: {{pokemon.species?.name}}</label>
+            <br><br>
+            <label for="">Localização: {{pokemon.location_area_encounters}}</label>
+            <br><br>
+            <label for="">Movimentos: 
+                <span class="moves" *ngFor="let move of pokemon.moves">
+                    {{move.move.name}}
+                </span>
+            </label>
+            <br><br>
+            <label for="">Tipos: 
+                <span class="type" *ngFor="let type of pokemon.types">
+                    {{type.type.name}}
+                </span>
+            </label>
+         </div>
+      </form>
+  </div>
+  
