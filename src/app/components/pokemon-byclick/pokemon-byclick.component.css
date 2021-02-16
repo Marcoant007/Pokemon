@@ -41,14 +41,23 @@
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
-    border: 2px solid #610606e8;
+    border: 10px solid #f0ec14e8;
+    background:linear-gradient(115deg, #3a0c56  0,  #610606e8 50%);
   }
 
   .pokemon:hover{
-    background:linear-gradient(115deg, #3a0c56  0,  #610606e8 50%);
+    background:linear-gradient(115deg, #1c7ab179  0,  #6cbbf036 50%);
+    border: 10px solid #03baf17c;
 
   }
   
+  img:hover{
+    -webkit-filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
+    filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
+    -webkit-transform: rotateZ(-360deg) scale(1.1);
+  }
+
+
   .name{
     padding-top: 50px;
     font-weight: 600;
@@ -122,4 +131,25 @@ i:hover{
   text-align: center;
   background-color: #ce1717;
   color: white;
+}
+
+.btn {
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 30px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  border: none;
+  color: white;
+  background: linear-gradient(115deg, #3a0c56  0,  #270335e8 50%);
+}
+.btn:hover {
+  text-decoration: none;
+  border: none;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  background: linear-gradient(115deg, #3a0c56  0,  #660303e8 50%);
 }

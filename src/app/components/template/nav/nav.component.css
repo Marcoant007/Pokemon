@@ -1,5 +1,5 @@
 .sidenav {
-    background: linear-gradient(115deg, #e01515  0,  #610606e8 50%);
+    background: linear-gradient(115deg, #5606a0  0,  #18032ee8 50%);
     width: 200px;
 }
 
@@ -36,10 +36,10 @@
 }
 
  .logo{
-     padding-top: -20px;
+     padding-top: 20px;
    padding-left: 15px;
-    max-height: 68px;
-    max-width: 120px;
+    max-height: 90px;
+    max-width: 150px;
     padding-bottom: 20px;
 }
 

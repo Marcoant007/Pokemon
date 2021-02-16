@@ -35,4 +35,11 @@ export class PokemonByclickComponent implements OnInit {
 
   }
 
+
+  async clickVoltar() {
+    this.router.navigate(['/pokemons']) 
+  }
+
+
+
 }

@@ -5,16 +5,21 @@
   <button   (click)="filterPokemons(pokemonName)" >Pesquisar
   </button>
 </div>
-
 <div class="container">
   <div *ngFor="let pokemon of filtredPokemons; let i = index" class="pokemon"
    (click)="clickPokemon(pokemon.id)">
     <img width="200" [src]="buildUrlImage(pokemon.id)" alt="">
-    <div class="name">
-      <label for="">Name: {{pokemon.name}}</label>    
+    <div  class="name">
+      <label for="">Nome: {{pokemon.name}}</label>
+      <br>
+     <label for="">Ataque : 98</label>
+     <br>
+     <label for="">Defensa: 76</label>
    </div>
   </div>
 </div>
+
+
 
 
 

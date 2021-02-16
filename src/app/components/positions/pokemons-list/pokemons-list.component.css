@@ -64,9 +64,10 @@ input[type=text]:focus {
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
+  border: 8px solid #e0dd0b;
 }
 
-.container :hover{
+img:hover{
   -webkit-filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
   filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
   -webkit-transform: rotateZ(-360deg) scale(1.1);
@@ -77,8 +78,14 @@ input[type=text]:focus {
 }
 
 .name{
-  padding-top: 50px;
+  padding: 10px;
+  padding-top: 20px;
+  width: 200px;
+  border-radius: 20px;
+  height: 150px;
   color: white;
   font-weight: 600;
   font-family: 'Courier New', Courier, monospace;
+  background: rgb(194, 193, 193);
 }
+

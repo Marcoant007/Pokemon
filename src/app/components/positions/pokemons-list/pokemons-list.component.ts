@@ -24,20 +24,29 @@ export class PokemonsReadComponents implements OnInit {
   }
 
   async ngOnInit() {
+    this.pokemon = {};
+    this.activatedRoute.params.subscribe(async (params: Params) =>  {
+      this.id = params.id;
+      const data = await this.pokemonService.pokemonMoves(this.id);
+      this.pokemon = data;
+    });
+    
     await this.loadPokemons();
-    console.log(this.pokemon)
   }
 
   async loadPokemons() {
+    
     const data = await this.pokemonService.findAllPokemons();
     this.filtredPokemons = data.results;
     this.allPokemons = this.filtredPokemons;
-    
+
     for await (const pokemon of this.filtredPokemons) {
       let result: any = await this.pokemonService.findPokemonByName(pokemon.name);
       pokemon.id = result.id;
     }
   }
+
+  
 
   async filterPokemons(query: string) {
     this.filtredPokemons = this.allPokemons.filter(pokemon => {

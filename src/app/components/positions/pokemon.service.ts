@@ -27,4 +27,8 @@ export class PokemonService {
         return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`).toPromise();
     }
 
+    public async pokemonMoves(id:number){
+        return this.http.get(`move:"https://pokeapi.co/api/v2/move/${id}"`).toPromise()
+    }
+
 }
