@@ -14,9 +14,6 @@ export class PokemonsReadComponents implements OnInit {
   pokemon: any = {};
   pokemonName: string = '';
   id: number ;
-
-  pokes: any = []
-
   constructor(
     private pokemonService: PokemonService,
     private router: Router,
@@ -27,27 +24,25 @@ export class PokemonsReadComponents implements OnInit {
     this.pokemon = {};
     this.activatedRoute.params.subscribe(async (params: Params) =>  {
       this.id = params.id;
-      const data = await this.pokemonService.pokemonMoves(this.id);
-      this.pokemon = data;
-    });
-    
     await this.loadPokemons();
+    });
   }
 
   async loadPokemons() {
-    
     const data = await this.pokemonService.findAllPokemons();
     this.filtredPokemons = data.results;
     this.allPokemons = this.filtredPokemons;
+  
 
     for await (const pokemon of this.filtredPokemons) {
       let result: any = await this.pokemonService.findPokemonByName(pokemon.name);
       pokemon.id = result.id;
+      pokemon.types = result.types;
+      pokemon.forms = result.forms;
+      pokemon.abilities = result.abilities;
     }
   }
-
-  
-
+ 
   async filterPokemons(query: string) {
     this.filtredPokemons = this.allPokemons.filter(pokemon => {
       return pokemon.name.includes(query);
