@@ -16,7 +16,7 @@ export class PokemonService {
     }
 
     public async findAllPokemons(): Promise<any>{
-        return this.http.get<any>('https://pokeapi.co/api/v2/pokemon?limit=151').toPromise()
+        return this.http.get<any>('https://pokeapi.co/api/v2/pokemon?limit=156').toPromise()
     }
 
     public async findPokemonData(id:number){

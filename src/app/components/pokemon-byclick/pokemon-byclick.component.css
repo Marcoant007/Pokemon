@@ -41,13 +41,13 @@
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
-    border: 10px solid #f0ec14e8;
+    border: 8px solid #a206d1e8;
     background:linear-gradient(115deg, #3a0c56  0,  #610606e8 50%);
   }
 
   .pokemon:hover{
     background:linear-gradient(115deg, #1c7ab179  0,  #6cbbf036 50%);
-    border: 10px solid #03baf17c;
+    border: 8px solid #03baf17c;
 
   }
   
@@ -117,21 +117,8 @@
 
 }
 
-i:hover{
-  color: #ce1717
-}
 
-#mytable tr:nth-child(even){background-color: #f2f2f2;}
 
-#mytable tr:hover {background-color: #ddd;}
-
-#mytable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #ce1717;
-  color: white;
-}
 
 .btn {
   border-radius: 20px;

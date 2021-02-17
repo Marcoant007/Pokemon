@@ -64,7 +64,7 @@ input[type=text]:focus {
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
-  border: 8px solid #e0dd0b;
+  border: 4px solid #8908da;
 }
 
 img:hover{
@@ -75,17 +75,25 @@ img:hover{
 
 .pokemon:hover{
   background:linear-gradient(115deg, #5daef0  0,  #0e579ce8 50%);
+  border: 6px solid rgba(255, 255, 255, 0.3);;
+}
+
+span .title {
+  background-color: black;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 .name{
   padding: 10px;
-  padding-top: 20px;
+  padding-top: 10px;
   width: 200px;
-  border-radius: 20px;
-  height: 150px;
+  height: 380px;
+  border-radius: 10px;
+  max-height: 150px;
   color: white;
-  font-weight: 600;
-  font-family: 'Courier New', Courier, monospace;
-  background: rgb(194, 193, 193);
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: rgba(255, 255, 255, 0.3);
 }
 
