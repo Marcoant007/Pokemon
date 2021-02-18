@@ -7,6 +7,7 @@
 
 }
 #divBusca{
+  padding: 15px;
   background-color:#f7f7f7;
   border:solid 1px;
   border-radius:15px;
@@ -21,12 +22,15 @@
 #txtBusca{
   background-color:transparent;
   margin: 0;
+  border:0;
   font-style:italic;
   font-size:18px;
-  border:none;
+  outline: none;
   height:32px;
   width:82%;
 }
+
+
 button {
   padding: 10px;
   text-align: center;
@@ -39,16 +43,7 @@ button {
   border: none;
 
 }
-input[type=text] {
-  width: 130px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-}
 
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-  width: 100%;
-}
 
 
 
