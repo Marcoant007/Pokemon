@@ -7,13 +7,13 @@
 
 }
 #divBusca{
-  padding: 15px;
+  padding: 10px;
   background-color:#f7f7f7;
   border:solid 1px;
   border-radius:15px;
-  width: 60%;
+  width: 82%;
   margin-left: 100px;
-  
+  margin-left: 85px;
   -webkit-filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
   filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
 }
@@ -35,7 +35,9 @@ button {
   padding: 10px;
   text-align: center;
   color: white;
-  margin-left: 4%;
+  margin-left: 70px;
+  font-weight: 600px;
+  font-size: 1rem;
   background: linear-gradient(115deg, #034106  0,  #11a111e8 50%);
   outline: none;
   border-radius: 10px;
