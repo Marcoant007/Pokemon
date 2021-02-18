@@ -1,3 +1,12 @@
+# Image: 
+Pokemons
+![Pokemons](https://user-images.githubusercontent.com/59663846/108075727-74d56e00-7049-11eb-9231-7c5473c95d4e.png)
+
+
+
+# Ultilizei Api:https://pokeapi.co/ para fins de estudantis.
+
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
